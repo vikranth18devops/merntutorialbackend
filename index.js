@@ -19,6 +19,10 @@ app.use(express.json());
 app.use(cors())
 
 //* Available routes
+
+app.get('/', (req, res) => {
+    res.json("eNotebook Backend API")
+});
 app.use('/api/auth', auth)
 app.use('/api/notes', notes)
 app.use('/api/aarvik', aarvik)
